@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#include <cmath>
-#include <vector>
 
 bool isPrime(int n) {
   if (n < 2)
@@ -32,7 +30,7 @@ std::vector<int> generatePrime(int n) {
   return primes;
 }
 
-void findGolbachConjecture(int n, const std::vector<int> &primes) {
+void findGoldbachConjecture(int n, const std::vector<int> &primes) {
 
   std::cout << n << " = ";
   bool firstPair = true;
@@ -64,7 +62,7 @@ int main() {
   for (int n = start; n <= end; n += 2) {
     if (n < 4)
       continue;
-    findGolbachConjecture(n, primes);
+    findGoldbachConjecture(n, primes);
   }
 
   return 0;
