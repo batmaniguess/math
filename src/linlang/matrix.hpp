@@ -17,7 +17,7 @@ public:
   Matrix(std::initializer_list<std::initializer_list<T>> init);
 
   // Factory Methods
-  static Matrix Indentify(size_t size);
+  static Matrix Identity(size_t size);
   static Matrix Zeros(size_t rows, size_t cols);
   static Matrix Ones(size_t rows, size_t cols);
   static Matrix Random(size_t rows, size_t cols, T min = 0, T max = 1);
@@ -43,6 +43,7 @@ public:
   Matrix inverse() const;
   std::tuple<Matrix, Matrix, Matrix> svd() const;
   std::tuple<Matrix, Matrix> eigenDecomposition() const;
+  std::tuple<Matrix, Matrix, Matrix> luDecompositionWithPivoting() const;
   T trace() const;
   size_t rank() const;
   Matrix psuedoInverse() const;
